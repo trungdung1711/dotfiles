@@ -1,0 +1,186 @@
+/* Catppuccin Mocha — waybar style
+ * Clean, minimal, consistent module pills
+ */
+
+@define-color base      #000000; 
+@define-color mantle    #181825; 
+@define-color crust     #11111b;
+
+
+@define-color text      #cdd6f4;
+@define-color subtext0  #a6adc8;
+@define-color subtext1  #bac2de;
+@define-color overlay0  #6c7086;
+
+@define-color surface0  #313244;
+@define-color surface1  #45475a;
+
+@define-color mauve     #cba6f7;
+@define-color lavender  #b4befe;
+@define-color blue      #89b4fa;
+@define-color teal      #94e2d5;
+@define-color green     #a6e3a1;
+@define-color yellow    #f9e2af;
+@define-color peach     #fab387;
+@define-color red       #f38ba8;
+
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11px;
+}
+
+window#waybar {
+    background-color: @base;
+    border-radius: 10px;
+    border-width: 0px;
+    border-color: alpha(#cba6f7, 0.8);
+    border-style: solid;
+}
+
+tooltip {
+    background-color: @mantle;
+    border: 1px solid @surface0;
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+tooltip label {
+    color: @text;
+}
+
+menu {
+    background-color: @mantle;
+    border: 1px solid @surface0;
+    border-radius: 8px;
+    padding: 0px;
+}
+
+menu menuitem {
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: @subtext1;
+}
+
+menu menuitem:hover {
+    background-color: @surface1;
+    color: @subtext0;
+}
+
+/* ---------- shared module pill ---------- */
+
+#workspaces,
+#pulseaudio,
+#battery,
+#cpu,
+#memory,
+#tray {
+    color: @white;
+    padding: 4px 12px;
+    margin: 4px 3px;
+    border-radius: 10px;
+}
+
+/* ---------- workspaces ---------- */
+#workspaces {
+    padding: 0px 0px;
+}
+
+#workspaces button {
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 100%;
+    color: @subtext1;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button.empty {
+    color: @overlay0;
+}
+
+#workspaces button.active {
+    color: #111111;
+    font-weight: bold;
+    background-color: #f5c2e7;
+}
+
+#workspaces button.urgent {
+    background-color: @blue; 
+    color: @crust ;
+}
+/* ---------- clock ---------- */
+
+#clock {
+    color: @white;
+    padding: 0px 5px 0px 0px;
+}
+
+/* ---------- pulseaudio ---------- */
+
+#pulseaudio {
+    color: @white;
+    margin: 0px;
+    padding: 0px;
+}
+
+#pulseaudio.muted {
+    color: @overlay0;
+}
+
+/* ---------- battery ---------- */
+
+#battery {
+    color: @white;
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+#battery.charging {
+    color: @teal;
+}
+
+#battery.warning:not(.charging) {
+    color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+}
+
+/* ---------- network ---------- */
+
+#network {
+    color: @white;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+/* ---------- cpu / memory ---------- */
+
+#cpu {
+    color: @mauve;
+}
+
+#memory {
+    color: @lavender;
+}
+
+/* ---------- tray ---------- */
+#tray {
+    color: @white;
+    background-color: @base;
+    padding: 0px 0px 0px 0px;
+
+}
+#tray > .passive {
+    color: @white;
+}
+
+#tray > .needs-attention {
+    background-color: @red;
+    border-radius: 8px;
+}
+

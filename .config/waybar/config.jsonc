@@ -1,0 +1,118 @@
+{
+	"layer" : "top",
+	"position": "top",
+	"width": 1920,
+	"height": 10,
+    "modules-left": ["tray"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["network", "bluetooth" , "pulseaudio",  "battery", "clock"],
+
+"bluetooth": {
+	"hci0": "hci0",
+    "format": "[ {status}  ]",
+    "format-on": "[ {status}  ]",
+    "format-off": "[ {status}  ]",
+    "format-disabled": "[ {status}  ]",
+    "format-connected": "[  ]",
+    "format-connected-battery": "[ {device_battery_percentage}%  ]",
+    "tooltip-format": "{controller_alias} {controller_address}\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias} {controller_address}\n{num_connections} connected\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias} {device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias} {device_address} {device_battery_percentage}%",
+    "on-click": "kitty -e bluetuith"
+}
+
+,
+	"tray" : {
+		"icon-size" : 15,
+		"spacing" : 5,
+		"show-passive-items": true,
+		"smooth-scrolling-threshold": 0.1
+	},
+  
+	"hyprland/workspaces": {
+		"format": "{icon}",
+	    	"tooltip": false,
+	    	"all-outputs": false,
+	    	"sort-by-number": true,
+	    	"disable-scroll": false,
+	    	"on-scroll-up": "hyprctl dispatch workspace +1",
+	    	"on-scroll-down": "hyprctl dispatch workspace -1",
+	    	"active-only": false,
+	    	"show-special": false 
+	},
+    
+    "hyprland/window": {
+	    "format": "{class}",
+	    "icon": true,
+	    "max-length": 50,
+	    "separate-outputs": true,
+	    "tooltip": false
+    },
+
+    "network": {
+        "format-wifi": "[ {signalStrength}%   ]",
+        "format-ethernet": "[ {ifname}   ]",
+        "format-disconnected": "[   ]", 
+        "max-length": 50,
+        "on-click": "kitty -e 'nmtui'",
+        "tooltip-format-wifi": "{ifname} {essid} {signalStrength}%"
+    },
+
+	"clock": {
+    		"interval": 60,
+    		"format": "[ {:%H:%M}  ]",
+    		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+    		"today-format": "<b><u>{}</u></b>",
+
+    		"calendar": {
+        		"mode" : "month",
+        		"mode-mon-col" : 3,
+        		"weeks-pos" : "right",
+        		"on-scroll" : 1,
+			"format": {
+            			"today": "<span color='#ff0000'><b><u>{}</u></b></span>"
+        		}
+    		}
+	},
+
+
+    "pulseaudio": {
+        "format": "[ {volume}% {icon} ]",
+        "format-bluetooth": "[ {volume}% {icon} ]",
+        "format-bluetooth-muted": "[ {icon} ]",
+        "format-muted": "[ 0% {icon} ]",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "kitty -e wiremix"
+    },
+
+    "battery": {
+        "interval": 60,
+        "format": "[ {capacity}% {icon} ]",
+    	"states": {
+        	"warning": 30,
+        	"critical": 15
+    		},
+    	"format": "[ {capacity}% {icon} ]",
+    	"format-charging": "[ {capacity}% ]",
+    	"format-plugged": "[ {capacity}% ]",
+        "format-icons": ["", "", "", "", ""],
+        "on-click": "kitty -e btop"
+    },
+
+	"backlight/slider": {
+		"min": 0,
+    		"max": 100,
+    		"orientation": "horizontal",
+    		"device": "amdgpu_bl1"
+	}
+}
