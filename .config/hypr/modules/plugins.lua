@@ -1,0 +1,38 @@
+-------------------
+----- PLUGIN ------
+-------------------
+
+
+-- hl.config({
+--     plugin = {
+--         overview = {
+--             panelColor = "#000000",
+--             panelBorderColor = "rgba(00000000)",
+--             workspaceActiveBackground = "rgba(00ff99ee)",
+--             workspaceActiveBorder = "rgba(33ccffee)",
+--             onBottom = false,
+--             autoDrag = true,
+--             -- Add other overview settings here
+--         }
+--     }
+-- })
+
+-- Plugin config
+-- hl.config({
+--     plugin = {
+--         scrolloverview = {
+--             gesture_distance = 300,
+--             scale = 0.5, 
+--             workspace_gap = 100,
+--             layout = "vertical",
+--             wallpaper = 2,
+--             wallpaper_layer = "auto",
+--             blur = true,
+--
+--             shadow = {
+--                 enabled = true,
+--                 range = 50,
+--             },
+--         },
+--     },
+-- })
