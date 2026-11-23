@@ -9,12 +9,12 @@
 
 "bluetooth": {
 	"hci0": "hci0",
-    "format": "[ {status}  ]",
-    "format-on": "[ {status}  ]",
-    "format-off": "[ {status}  ]",
-    "format-disabled": "[ {status}  ]",
-    "format-connected": "[  ]",
-    "format-connected-battery": "[ {device_battery_percentage}%  ]",
+    "format": "{status}  | ",
+    "format-on": "{status}  | ",
+    "format-off": "{status}  | ",
+    "format-disabled": "{status}  | ",
+    "format-connected": " | ",
+    "format-connected-battery": "{device_battery_percentage}%  | ",
     "tooltip-format": "{controller_alias} {controller_address}\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias} {controller_address}\n{num_connections} connected\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias} {device_address}",
@@ -51,9 +51,9 @@
     },
 
     "network": {
-        "format-wifi": "[ {signalStrength}%   ]",
-        "format-ethernet": "[ {ifname}   ]",
-        "format-disconnected": "[   ]", 
+        "format-wifi": "{signalStrength}%   | ",
+        "format-ethernet": "{ifname}   | ",
+        "format-disconnected": "  | ", 
         "max-length": 50,
         "on-click": "kitty -e 'nmtui'",
         "tooltip-format-wifi": "{ifname} {essid} {signalStrength}%"
@@ -61,7 +61,7 @@
 
 	"clock": {
     		"interval": 60,
-    		"format": "[ {:%H:%M}  ]",
+    		"format": "{:%H:%M}   ",
     		"tooltip-format": "<tt><small>{calendar}</small></tt>",
     		"today-format": "<b><u>{}</u></b>",
 
@@ -78,10 +78,10 @@
 
 
     "pulseaudio": {
-        "format": "[ {volume}% {icon} ]",
-        "format-bluetooth": "[ {volume}% {icon} ]",
-        "format-bluetooth-muted": "[ {icon} ]",
-        "format-muted": "[ 0% {icon} ]",
+        "format": "{volume}% {icon} | ",
+        "format-bluetooth": "{volume}% {icon} | ",
+        "format-bluetooth-muted": "{icon} | ",
+        "format-muted": "0% {icon} | ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -97,14 +97,14 @@
 
     "battery": {
         "interval": 60,
-        "format": "[ {capacity}% {icon} ]",
+        "format": "{capacity}% {icon} | ",
     	"states": {
         	"warning": 30,
         	"critical": 15
     		},
-    	"format": "[ {capacity}% {icon} ]",
-    	"format-charging": "[ {capacity}% ]",
-    	"format-plugged": "[ {capacity}% ]",
+    	"format": "{capacity}% {icon}  | ",
+    	"format-charging": "{capacity}%  | ",
+    	"format-plugged": "{capacity}%  | ",
         "format-icons": ["", "", "", "", ""],
         "on-click": "kitty -e btop"
     },

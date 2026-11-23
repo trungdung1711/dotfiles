@@ -41,7 +41,7 @@
     # Offset from the origin
     # NOTE: Dunst from version 1.11 and older use this alternative notation
     # offset = 10x50
-    # offset = (25, 20)
+    offset = (5, 35)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -111,7 +111,7 @@
     frame_width = 2
 
     # Defines color of the frame around the notification window.
-    # frame_color = "#f38ba8"
+    frame_color = "#f38ba8"
     background = "#1e1e2e"
     foreground = "#cdd6f4"
     frame_color = "#45475a"
@@ -368,9 +368,9 @@
     timeout = 5
 
 [urgency_normal]
-    background = "#1e1e2e"
+    background = "#313244"
     foreground = "#cdd6f4"
-    frame_color = "#89b4fa"
+    frame_color = "#cba6f7"
     timeout = 8
 
 [urgency_critical]

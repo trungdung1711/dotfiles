@@ -25,6 +25,7 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 -- hl.bind(mainMod .. " + l", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + k",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + j",  hl.dsp.focus({ direction = "down" }))
+-- hl.bind(mainMod .. " + f", hl.dsp.exec_cmd('kitty -e sh -c "cd ~ && nvim $(fzf)"'))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
