@@ -166,3 +166,5 @@ export EDITOR="nvim"
 
 # zocide
 eval "$(zoxide init zsh --cmd cd)"
+# starship
+eval "$(starship init zsh)"
