@@ -21,7 +21,7 @@ setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a dupl
 setopt HIST_REDUCE_BLANKS     # Remove superfluous blanks before recording entry
 
 # Key binding just like vim
-# bindkey -v
+bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/zun/.zshrc'
@@ -70,7 +70,7 @@ zinit light zsh-users/zsh-completions
 zinit light MichaelAquilina/zsh-you-should-use
 
 # Plugin: Add sudo to previous commands (OMZ)
-# zinit snippet OMZ::plugins/sudo/sudo.plugin.zsh
+zinit snippet OMZ::plugins/sudo/sudo.plugin.zsh
 
 # Plugin: Add web search to the shell (OMZ)
 # zinit ice svn
