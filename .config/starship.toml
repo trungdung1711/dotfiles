@@ -1,0 +1,39 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = """
+$directory$git_branch$git_status
+$character"""
+
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+style = "bold cyan"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold green)"
+
+[git_branch]
+format = " [$branch]($style)"
+style = "bold purple"
+
+[git_status]
+format = '([$all_status$ahead_behind]($style))'
+style = "bold yellow"
+conflicted = "="
+modified = "!"
+staged = "+"
+untracked = "?"
+deleted = "-"
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
