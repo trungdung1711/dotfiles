@@ -7,19 +7,22 @@ palette = "catppuccin_mocha"
 # Inserts a blank line between shell prompts
 add_newline = true
 
-format = """
-$directory$git_branch$git_status $fill$conda
+format = """\
+$directory$git_branch$git_status
 $character"""
+
+right_format = """\
+$conda"""
 
 [directory]
 truncation_length = 3
-truncate_to_repo = false
+truncate_to_repo = true 
 style = "bold lavender"
 
 [character]
 success_symbol = "[(green)❯](peach)"
-error_symbol = "[(red)❯](peach)"
-vimcmd_symbol = "[❮](subtext1)"
+error_symbol = "[(red)✘](peach)"
+vimcmd_symbol = "[(sapphire)](subtext1)"
 
 [git_branch]
 format = " [$branch]($style)"

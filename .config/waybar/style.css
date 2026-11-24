@@ -2,7 +2,7 @@
  * Clean, minimal, consistent module pills
  */
 
-@define-color base      #000000; 
+@define-color base      #1e1e2e; 
 @define-color mantle    #181825; 
 @define-color crust     #11111b;
 
@@ -27,15 +27,16 @@
 * {
     all: unset;
     font-family: "JetBrainsMono Nerd Font";
-    font-size: 11px;
+    font-size: 10px;
 }
 
 window#waybar {
     background-color: @base;
-    border-radius: 10px;
+    border-radius: 0px;
     border-width: 0px;
     border-color: alpha(#cba6f7, 0.8);
     border-style: solid;
+    min-height: 5px;
 }
 
 tooltip {
@@ -75,7 +76,7 @@ menu menuitem:hover {
 #cpu,
 #memory,
 #tray {
-    color: @white;
+    color: @text;
     padding: 4px 12px;
     margin: 4px 3px;
     border-radius: 10px;
@@ -100,9 +101,9 @@ menu menuitem:hover {
 }
 
 #workspaces button.active {
-    color: #111111;
+    color: #11111b;
     font-weight: bold;
-    background-color: #f5c2e7;
+    background-color: #b4befe;
 }
 
 #workspaces button.urgent {
@@ -112,14 +113,14 @@ menu menuitem:hover {
 /* ---------- clock ---------- */
 
 #clock {
-    color: @white;
+    color: @text;
     padding: 0px 5px 0px 0px;
 }
 
 /* ---------- pulseaudio ---------- */
 
 #pulseaudio {
-    color: @white;
+    color: @text;
     margin: 0px;
     padding: 0px;
 }
@@ -131,7 +132,7 @@ menu menuitem:hover {
 /* ---------- battery ---------- */
 
 #battery {
-    color: @white;
+    color: @text;
     margin: 0px;
     padding: 0px 0px 0px 0px;
 }
@@ -151,7 +152,7 @@ menu menuitem:hover {
 /* ---------- network ---------- */
 
 #network {
-    color: @white;
+    color: @text;
 }
 
 #network.disconnected {
@@ -170,7 +171,7 @@ menu menuitem:hover {
 
 /* ---------- tray ---------- */
 #tray {
-    color: @white;
+    color: @text;
     background-color: @base;
     padding: 0px 0px 0px 0px;
 

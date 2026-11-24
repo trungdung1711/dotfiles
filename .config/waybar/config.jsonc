@@ -2,7 +2,7 @@
 	"layer" : "top",
 	"position": "top",
 	"width": 1920,
-	"height": 10,
+	"height": 5,
     "modules-left": ["tray"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["network", "bluetooth" , "pulseaudio",  "battery", "clock"],
