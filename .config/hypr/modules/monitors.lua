@@ -3,9 +3,9 @@
 ------------------
 
 -- See https://wiki.hypr.land/configuring/core/monitors/
-hl.monitor({
-    output = "eDP-1",
-    mode = "1920x1080@120.00",
-    position = "2592x192",
-    scale = 1.00,
-})
+-- hl.monitor({
+--     output = "eDP-1",
+--     mode = "1920x1080@120.00",
+--     position = "2592x192",
+--     scale = 1.00,
+-- })

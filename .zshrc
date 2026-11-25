@@ -36,9 +36,15 @@ compinit
 # export XDG_DATA_HOME="$HOME/.local/share"
 # export XDG_STATE_HOME="$HOME/.local/state"
 
-# Adding Go's binary to $PATH
+# ENVIROMENT VARIABLES
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/scripts:$PATH"
+
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+export PATH="$ANDROID_HOME/emulator:$PATH"
+export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
