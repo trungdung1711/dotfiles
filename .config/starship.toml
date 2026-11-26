@@ -20,7 +20,7 @@ truncate_to_repo = true
 style = "bold lavender"
 
 [character]
-success_symbol = "[(green)❯](peach)"
+success_symbol = "[(green)](peach)"
 error_symbol = "[(red)✘](peach)"
 vimcmd_symbol = "[(sapphire)](subtext1)"
 

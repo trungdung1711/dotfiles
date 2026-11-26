@@ -1,12 +1,13 @@
 ----------------
 ----  MISC  ----
 ----------------
+local colors = require("modules/theme")
 
 hl.config({
     misc = {
         force_default_wallpaper = 0,    -- Set to 0 or 1 to disable the anime mascot wallpapers
         disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
-        background_color = "#1e1e2e",
+        background_color = colors.base,
         vrr = 1
     },
 })

@@ -3,6 +3,8 @@
 -----------------------
 
 -- Refer to https://wiki.hypr.land/configuring/core/config-options/
+colors = require("modules/theme")
+
 hl.config({
     general = {
         gaps_in  = 2,
@@ -56,13 +58,13 @@ hl.config({
 hl.config({
     scrolling = {
         fullscreen_on_one_column = true, 
-        column_width = 0.75,              
+        column_width = 0.8,              
         focus_fit_method = 1,            
         follow_focus = 1,                
         follow_min_visible = 0.4,        
-        explicit_column_widths = "0.25, 0.5, 0.75, 1.0",
+        explicit_column_widths = "0.3, 0.6, 0.8, 1.0",
         wrap_focus = true,
         wrap_swapcol = true,
-        direction = "right",
+        direction = "left",
     }
 })

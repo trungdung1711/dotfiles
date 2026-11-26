@@ -8,6 +8,7 @@ local mainMod     = "SUPER" -- Sets "Windows" key as main modifier
 local terminal    = programs.terminal
 local fileManager = programs.fileManager
 local menu        = programs.menu
+local calc        = programs.calc
 
 -- Example binds, see https://wiki.hypr.land/configuring/core/binds/ for more
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
@@ -64,7 +65,7 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 -- Custom keybindings
 hl.bind(mainMod .. " + X",
-    hl.dsp.exec_cmd("~/.config/rofi/launchers/type-4/calc.sh"))
+    hl.dsp.exec_cmd(calc))
 -- hl.bind(mainMod .. " + period",
     -- hl.dsp.exec_cmd("~/.config/rofi/launchers/type-4/emoji.sh"))
 hl.bind(mainMod .. " + SHIFT + L",

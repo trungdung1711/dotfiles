@@ -6,9 +6,10 @@
 local programs = {
     terminal    = "kitty",
     fileManager = "kitty -e yazi",
-    menu        = "~/.config/rofi/launchers/type-4/launcher.sh",
+    menu        = "rofi -show run -theme ~/.config/rofi/config.rasi",
     browser     = "firefox",
-    editor      = "nvim"
+    editor      = "nvim",
+    calc        = "rofi -show calc -theme ~/.config/rofi/config_calc.rasi"
 }
 
 return programs

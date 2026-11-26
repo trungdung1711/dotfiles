@@ -45,6 +45,7 @@ require("modules/layers")
 require("modules/input")
 require("modules/keybindings")
 require("modules/window-rules")
+require("modules/theme")
 
 -- hyprmon: managed monitor profile include
 require("hyprmon")
